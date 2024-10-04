@@ -93,17 +93,17 @@ def cretae_table():
     
     cur.execute('''
         CREATE TABLE IF NOT EXISTS public."users" (
-            id UUID PRIMARY KEY,
-            first_name TEXT,
-            last_name TEXT,
-            gender TEXT,
-            address TEXT,
-            post_code TEXT,
-            email TEXT,
-            username TEXT,
-            registered_date TEXT,
-            phone TEXT,
-            picture TEXT
+            id PRIMARY KEY,
+            first_name VARCHAR(50),
+            last_name VARCHAR(50),
+            gender VARCHAR(50),
+            address VARCHAR(50),
+            post_code VARCHAR(50),
+            email VARCHAR(50),
+            username VARCHAR(50),
+            registered_date VARCHAR(50),
+            phone VARCHAR(50),
+            picture VARCHAR(50)
         );
         ''')
     conn.commit()
@@ -119,7 +119,7 @@ def put_data_in_postgres_database():
     conn, cur = connect_to_postgres()
     for df in data : 
         cur.execute('''
-            INSERT INTO users (id, first_name, last_name, gender, address, post_code, email, username, registered_date, phone, picture)
+            INSERT INTO public."users" (id, first_name, last_name, gender, address, post_code, email, username, registered_date, phone, picture)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         ''', (df['id'], df['first_name'],
             df['last_name'], df['gender'], df['address'],
