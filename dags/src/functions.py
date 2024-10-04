@@ -27,7 +27,7 @@ def format_data(res):
     }
     logging.info(f"Data formatted")
     return data
-
+data = []
 def stream_data():
 
 
@@ -35,23 +35,31 @@ def stream_data():
     curr_time = time.time()
 
     while True:
-        if time.time() > curr_time + 60: #1 minute
+        if time.time() > curr_time + 10: #1 minute
             logging.info(f"Time limit reached")
             break
         try:
             res = get_data()
             res = format_data(res)
-
+            
+            
             producer.send('users_created', json.dumps(res).encode('utf-8'))
+            data.append(res)
         except Exception as e:
             logging.error(f'An error occured: {e}')
             continue
+        
+        file_path = "dump/data.json"
+        with open(file_path, 'w') as f:
+            json.dump(data, f)
+        
+    return "Data streamed"
         
 
 def connect_to_postgres():
     USER = 'etl'
     PWD = 'etl'
-    HOST = 'confluent'
+    HOST = 'host.docker.internal'
     DB = 'etl'
     PORT = '5433'
     
@@ -63,9 +71,48 @@ def connect_to_postgres():
         port=PORT
     )
     logging.info(f"Connected to Postgres")
-    return conn
     
+    cur = conn.cursor()
     
+    return conn, cur
+   
+def cretae_table():
+    conn, cur = connect_to_postgres()
     
+    cur.execute('''
+        CREATE TABLE IF NOT EXISTS users (
+            id UUID PRIMARY KEY,
+            first_name TEXT,
+            last_name TEXT,
+            gender TEXT,
+            address TEXT,
+            post_code TEXT,
+            email TEXT,
+            username TEXT,
+            registered_date TEXT,
+            phone TEXT,
+            picture TEXT
+        );
+    ''')
+    conn.commit()
+    logging.info("Table created successfully")
+    return "Table created successfully"
+
 def put_data_in_postgres_database():
-    pass
+    
+    with open("dump/data.json", 'r') as f:
+        data = json.load(f)
+    conn, cur = connect_to_postgres()
+    for df in data : 
+        cur.execute('''
+            INSERT INTO users (id, first_name, last_name, gender, address, post_code, email, username, registered_date, phone, picture)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        ''', (df['id'], df['first_name'],
+            df['last_name'], df['gender'], df['address'],
+            df['post_code'], df['email'], df['username'], 
+            df['registered_date'], df['phone'], df['picture']))
+        logging.info("Data inserted into Postgres")
+        
+        logging.info("Data inserted into Postgres")
+        conn.commit()
+    return "Data inserted into Postgres"

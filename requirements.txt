@@ -5,3 +5,4 @@ psycopg2-binary
 pandas
 openpyxl
 kafka-python==2.0.2
+quixstreams
