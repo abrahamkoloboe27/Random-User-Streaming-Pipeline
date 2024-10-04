@@ -2059,3 +2059,6 @@ ModuleNotFoundError: No module named 'quixstreams'
 [2024-10-04T11:14:03.427+0000] {logging_mixin.py:190} INFO - [2024-10-04T11:14:03.426+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2024-10-04T11:14:03.900+0000] {logging_mixin.py:190} INFO - [2024-10-04T11:14:03.900+0000] {dag.py:4180} INFO - Setting next_dagrun for user_automation to 2024-10-04 11:10:00+00:00, run_after=2024-10-04 11:20:00+00:00
 [2024-10-04T11:14:04.081+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 3.227 seconds
+[2024-10-04T11:14:35.822+0000] {processor.py:186} INFO - Started process (PID=192) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T11:14:35.891+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T11:14:36.258+0000] {logging_mixin.py:190} INFO - [2024-10-04T11:14:36.232+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
