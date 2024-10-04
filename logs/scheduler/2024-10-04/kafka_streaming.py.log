@@ -1,0 +1,928 @@
+[2024-10-04T09:15:13.320+0000] {processor.py:186} INFO - Started process (PID=175) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:15:13.322+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:15:13.329+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:15:13.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:15:13.475+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:15:13.467+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 4, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:15:13.476+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:15:13.522+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.207 seconds
+[2024-10-04T09:15:43.991+0000] {processor.py:186} INFO - Started process (PID=198) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:15:43.993+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:15:44.001+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:15:44.000+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:15:44.078+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:15:44.072+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 4, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:15:44.079+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:15:44.204+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.226 seconds
+[2024-10-04T09:16:14.915+0000] {processor.py:186} INFO - Started process (PID=220) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:16:14.917+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:16:14.927+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:16:14.926+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:16:15.192+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:16:15.163+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 4, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:16:15.193+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:16:15.286+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.399 seconds
+[2024-10-04T09:16:45.658+0000] {processor.py:186} INFO - Started process (PID=243) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:16:45.660+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:16:45.683+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:16:45.678+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:16:46.078+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:16:46.064+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 4, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:16:46.079+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:16:46.229+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.727 seconds
+[2024-10-04T09:31:28.120+0000] {processor.py:186} INFO - Started process (PID=170) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:31:28.121+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:31:28.125+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:31:28.124+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:31:28.174+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:31:28.172+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:31:28.174+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:31:28.189+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.073 seconds
+[2024-10-04T09:31:58.856+0000] {processor.py:186} INFO - Started process (PID=193) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:31:58.857+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:31:58.881+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:31:58.879+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:31:58.995+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:31:58.990+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:31:58.995+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:31:59.047+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.228 seconds
+[2024-10-04T09:32:29.260+0000] {processor.py:186} INFO - Started process (PID=216) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:32:29.261+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:32:29.267+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:32:29.266+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:32:29.352+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:32:29.347+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:32:29.353+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:32:29.388+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.142 seconds
+[2024-10-04T09:32:59.906+0000] {processor.py:186} INFO - Started process (PID=239) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:32:59.907+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:32:59.914+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:32:59.912+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:33:00.007+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:33:00.002+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:33:00.007+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:33:00.030+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.145 seconds
+[2024-10-04T09:33:30.901+0000] {processor.py:186} INFO - Started process (PID=262) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:33:30.903+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:33:30.915+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:33:30.914+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:33:31.083+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:33:31.074+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:33:31.084+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:33:31.186+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.322 seconds
+[2024-10-04T09:34:01.419+0000] {processor.py:186} INFO - Started process (PID=285) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:34:01.421+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:34:01.426+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:34:01.425+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:34:01.495+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:34:01.493+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:34:01.496+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:34:01.530+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.124 seconds
+[2024-10-04T09:34:31.980+0000] {processor.py:186} INFO - Started process (PID=307) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:34:31.981+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:34:31.986+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:34:31.986+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:34:32.028+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:34:32.025+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:34:32.028+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:34:32.050+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.081 seconds
+[2024-10-04T09:35:02.507+0000] {processor.py:186} INFO - Started process (PID=330) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:35:02.509+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:35:02.513+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:35:02.512+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:35:02.581+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:35:02.577+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:35:02.581+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:35:02.603+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.107 seconds
+[2024-10-04T09:35:32.966+0000] {processor.py:186} INFO - Started process (PID=353) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:35:32.969+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:35:32.973+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:35:32.973+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:35:33.010+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:35:33.006+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:35:33.011+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:35:33.052+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.099 seconds
+[2024-10-04T09:36:03.572+0000] {processor.py:186} INFO - Started process (PID=376) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:36:03.574+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:36:03.578+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:36:03.577+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:36:03.619+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:36:03.617+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:36:03.620+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:36:03.663+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.104 seconds
+[2024-10-04T09:36:34.261+0000] {processor.py:186} INFO - Started process (PID=398) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:36:34.262+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:36:34.265+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:36:34.265+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:36:34.317+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:36:34.315+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:36:34.317+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:36:34.367+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.118 seconds
+[2024-10-04T09:37:05.001+0000] {processor.py:186} INFO - Started process (PID=421) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:37:05.002+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:37:05.009+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:37:05.008+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:37:05.143+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:37:05.140+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:37:05.144+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:37:05.178+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.197 seconds
+[2024-10-04T09:37:35.406+0000] {processor.py:186} INFO - Started process (PID=444) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:37:35.411+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:37:35.429+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:37:35.428+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:37:35.507+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:37:35.504+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:37:35.508+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:37:35.550+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.157 seconds
+[2024-10-04T09:38:05.965+0000] {processor.py:186} INFO - Started process (PID=467) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:38:05.967+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:38:05.971+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:38:05.971+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:38:06.043+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:38:06.040+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:38:06.044+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:38:06.079+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.124 seconds
+[2024-10-04T09:38:36.501+0000] {processor.py:186} INFO - Started process (PID=490) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:38:36.502+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:38:36.508+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:38:36.507+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:38:36.570+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:38:36.567+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:38:36.570+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:38:36.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.134 seconds
+[2024-10-04T09:39:07.087+0000] {processor.py:186} INFO - Started process (PID=513) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:39:07.088+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:39:07.093+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:39:07.093+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:39:07.135+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:39:07.133+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:39:07.136+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:39:07.171+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.102 seconds
+[2024-10-04T09:39:37.741+0000] {processor.py:186} INFO - Started process (PID=536) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:39:37.742+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:39:37.755+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:39:37.755+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:39:37.798+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:39:37.796+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:39:37.799+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:39:37.844+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.114 seconds
+[2024-10-04T09:40:08.338+0000] {processor.py:186} INFO - Started process (PID=559) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:40:08.341+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:40:08.347+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:40:08.346+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:40:08.400+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:40:08.396+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:40:08.400+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:40:08.444+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.132 seconds
+[2024-10-04T09:40:38.867+0000] {processor.py:186} INFO - Started process (PID=582) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:40:38.870+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:40:38.874+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:40:38.874+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:40:38.950+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:40:38.947+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:40:38.951+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:40:38.979+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.136 seconds
+[2024-10-04T09:41:09.305+0000] {processor.py:186} INFO - Started process (PID=605) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:41:09.311+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:41:09.319+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:41:09.319+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:41:09.364+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:41:09.360+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:41:09.365+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:41:09.404+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.124 seconds
+[2024-10-04T09:41:40.213+0000] {processor.py:186} INFO - Started process (PID=628) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:41:40.215+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:41:40.223+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:41:40.221+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:41:40.373+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:41:40.365+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:41:40.374+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:41:40.436+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.260 seconds
+[2024-10-04T09:42:31.859+0000] {processor.py:186} INFO - Started process (PID=170) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:42:31.862+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:42:31.872+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:42:31.871+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:42:31.989+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:42:31.983+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:42:31.990+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:42:32.047+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.202 seconds
+[2024-10-04T09:43:02.591+0000] {processor.py:186} INFO - Started process (PID=194) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:43:02.593+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:43:02.610+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:43:02.608+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:43:02.817+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:43:02.801+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:43:02.819+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:43:02.877+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.319 seconds
+[2024-10-04T09:43:33.036+0000] {processor.py:186} INFO - Started process (PID=217) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:43:33.037+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:43:33.044+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:43:33.044+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:43:33.124+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:43:33.120+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:43:33.124+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:43:33.171+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.145 seconds
+[2024-10-04T09:44:03.880+0000] {processor.py:186} INFO - Started process (PID=239) to work on /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:44:03.881+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/kafka_streaming.py for tasks to queue
+[2024-10-04T09:44:03.893+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:44:03.892+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:44:04.016+0000] {logging_mixin.py:190} INFO - [2024-10-04T09:44:04.012+0000] {dagbag.py:387} ERROR - Failed to import: /opt/airflow/dags/kafka_streaming.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 383, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/kafka_streaming.py", line 5, in <module>
+    from src.functions import *
+  File "/opt/airflow/dags/src/functions.py", line 5, in <module>
+    from kafka import KafkaProducer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/__init__.py", line 23, in <module>
+    from kafka.consumer import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/__init__.py", line 3, in <module>
+    from kafka.consumer.group import KafkaConsumer
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/group.py", line 13, in <module>
+    from kafka.consumer.fetcher import Fetcher
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/consumer/fetcher.py", line 19, in <module>
+    from kafka.record import MemoryRecords
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/__init__.py", line 1, in <module>
+    from kafka.record.memory_records import MemoryRecords, MemoryRecordsBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/memory_records.py", line 27, in <module>
+    from kafka.record.legacy_records import LegacyRecordBatch, LegacyRecordBatchBuilder
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/record/legacy_records.py", line 50, in <module>
+    from kafka.codec import (
+  File "/home/airflow/.local/lib/python3.12/site-packages/kafka/codec.py", line 9, in <module>
+    from kafka.vendor.six.moves import range
+ModuleNotFoundError: No module named 'kafka.vendor.six.moves'
+[2024-10-04T09:44:04.017+0000] {processor.py:927} WARNING - No viable dags retrieved from /opt/airflow/dags/kafka_streaming.py
+[2024-10-04T09:44:04.062+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/kafka_streaming.py took 0.210 seconds
