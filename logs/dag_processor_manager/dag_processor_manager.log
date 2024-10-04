@@ -1380,3 +1380,93 @@ File Path                             PID    Runtime      # DAGs    # Errors  La
 /opt/airflow/dags/kafka_streaming.py                           1           0  0.64s           2024-10-04T11:06:44                      12
 ================================================================================
 [2024-10-04T11:07:29.154+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-10-04T11:08:17.588+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-10-04T11:08:17.593+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-10-04T11:08:17.594+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-10-04T11:08:17.595+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-10-04T11:08:17.620+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2024-10-04T11:08:18.087+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/kafka_streaming.py    161  0.17s             0           0                                                   0
+================================================================================
+[2024-10-04T11:08:48.783+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/kafka_streaming.py    184  0.05s             1           0  0.56s           2024-10-04T11:08:18                      12
+================================================================================
+[2024-10-04T11:09:19.456+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/kafka_streaming.py                           1           0  1.01s           2024-10-04T11:08:49                      12
+================================================================================
+[2024-10-04T11:09:47.229+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-10-04T11:10:49.196+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-10-04T11:10:49.199+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-10-04T11:10:49.200+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-10-04T11:10:49.201+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-10-04T11:10:49.223+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2024-10-04T11:10:49.340+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/kafka_streaming.py    161  0.04s             0           0                                                   0
+================================================================================
+[2024-10-04T11:11:20.435+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/kafka_streaming.py    187  0.10s             1           0  0.28s           2024-10-04T11:10:49                      12
+================================================================================
+[2024-10-04T11:11:50.635+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/kafka_streaming.py                           1           0  0.90s           2024-10-04T11:11:21                      12
+================================================================================
+[2024-10-04T11:12:20.964+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/kafka_streaming.py                           1           0  0.70s           2024-10-04T11:11:52                      12
+================================================================================
+[2024-10-04T11:12:24.402+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-10-04T11:12:24.400+0000] {manager.py:465} INFO - Exiting gracefully upon receiving signal 15
+[2024-10-04T11:14:00.208+0000] {manager.py:483} INFO - Processing files using up to 2 processes at a time 
+[2024-10-04T11:14:00.217+0000] {manager.py:484} INFO - Process each file at most once every 30 seconds
+[2024-10-04T11:14:00.219+0000] {manager.py:485} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-10-04T11:14:00.220+0000] {manager.py:821} INFO - Searching for files in /opt/airflow/dags
+[2024-10-04T11:14:00.291+0000] {manager.py:824} INFO - There are 1 files in /opt/airflow/dags
+[2024-10-04T11:14:01.022+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                               PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run      Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  ----------  ----------------------
+/opt/airflow/dags/kafka_streaming.py    170  0.32s             0           0                                                   0
+================================================================================
+[2024-10-04T11:14:31.167+0000] {manager.py:997} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                             PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run               Last # of DB Queries
+------------------------------------  -----  ---------  --------  ----------  --------------  -------------------  ----------------------
+/opt/airflow/dags/kafka_streaming.py                           1           0  3.56s           2024-10-04T11:14:04                      12
+================================================================================
