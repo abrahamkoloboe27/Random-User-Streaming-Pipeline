@@ -28,6 +28,10 @@ with DAG('user_automation',
         task_id='put_data_in_postgres_database',
         python_callable=put_data_in_postgres_database
     )
+    # cleanup_task = PythonOperator(
+    #     task_id = 'cleanup_files',
+    #     python_callable = clean_up_files
+    # )
     end_task = EmptyOperator(
         task_id='end'
     )
