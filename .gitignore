@@ -1,0 +1,6 @@
+**__pycahce__
+dags/src/__pycache__/*
+logs/*
+dags/__pycache__/*
+logs/dag_processor_manager/*
+logs/

@@ -5,7 +5,7 @@ import json
 from kafka import KafkaProducer
 import time
 import logging
-import pyscopg2
+import psycopg2
 
 def get_data():
     response = requests.get('https://randomuser.me/api/')

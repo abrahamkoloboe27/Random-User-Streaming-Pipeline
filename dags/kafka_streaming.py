@@ -12,7 +12,7 @@ default_args = {
 
 with DAG('user_automation',
          default_args=default_args,
-         schedule_interval='* * * * *',
+         schedule_interval='*/5 * * * *',
          catchup=False
 )as dag:
     
