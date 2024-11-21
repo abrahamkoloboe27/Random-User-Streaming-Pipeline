@@ -4,3 +4,8 @@ logs/*
 dags/__pycache__/*
 logs/dag_processor_manager/*
 logs/
+.env
+compose.local.yaml
+.secrets
+.venv/
+certificates/

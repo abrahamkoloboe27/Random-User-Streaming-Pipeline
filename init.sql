@@ -1,16 +1,26 @@
+DO $$
+BEGIN
+   IF NOT EXISTS (
+      SELECT FROM pg_database
+      WHERE datname = 'etl'
+   ) THEN
+      PERFORM dblink_exec('dbname=etl', 'CREATE DATABASE etl');
+   END IF;
+END
+$$;
 
 \c etl;
 
-CREATE TABLE IF NOT EXISTS users(
-    id PRIMARY KEY,
-    first_name VARCHAR(50),
-    last_name VARCHAR(50),
-    gender VARCHAR(50),
-    address VARCHAR(50),
-    post_code VARCHAR(50),
-    email VARCHAR(50),
-    username VARCHAR(50),
-    registered_date VARCHAR(50),
-    phone VARCHAR(50),
-    picture VARCHAR(50)
+CREATE TABLE IF NOT EXISTS public."users"(
+    id  VARCHAR(2250) PRIMARY KEY,
+    first_name VARCHAR(250),
+    last_name VARCHAR(250),
+    gender VARCHAR(250),
+    address VARCHAR(250),
+    post_code VARCHAR(250),
+    email VARCHAR(250),
+    username VARCHAR(250),
+    registered_date VARCHAR(250),
+    phone VARCHAR(250),
+    picture VARCHAR(250)
 );

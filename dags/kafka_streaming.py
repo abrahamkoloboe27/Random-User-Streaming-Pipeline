@@ -12,7 +12,7 @@ default_args = {
 
 with DAG('user_automation',
          default_args=default_args,
-         schedule_interval='*/10 * * * *',
+         schedule_interval="@hourly",
          catchup=False
 )as dag:
     
@@ -28,12 +28,12 @@ with DAG('user_automation',
         task_id='put_data_in_postgres_database',
         python_callable=put_data_in_postgres_database
     )
-    # cleanup_task = PythonOperator(
-    #     task_id = 'cleanup_files',
-    #     python_callable = clean_up_files
-    # )
+    cleanup_task = PythonOperator(
+        task_id = 'cleanup_files',
+        python_callable = clean_up_files
+    )
     end_task = EmptyOperator(
         task_id='end'
     )
     
-    start_task >> streaming_task  >> put_data_in_postgres_database_task >> end_task
+    start_task >> streaming_task  >> put_data_in_postgres_database_task >> cleanup_task >> end_task

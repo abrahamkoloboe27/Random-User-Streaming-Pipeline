@@ -18,7 +18,7 @@ def get_data():
 def format_data(res):
     data = {}
     location = res['location']
-    data['id'] = res["info"]["seed"]
+    data['id'] = res["login"]["uuid"][10:]
     data['first_name'] = res['name']['first']
     data['last_name'] = res['name']['last']
     data['gender'] = res['gender']
@@ -42,11 +42,11 @@ def custom_serializer(obj):
 def stream_data():
 
     data = []
-    producer = KafkaProducer(bootstrap_servers=['broker:29092'], max_block_ms=5000)
+    producer = KafkaProducer(bootstrap_servers=['broker-etl:29092'], max_block_ms=5000)
     curr_time = time.time()
 
     while True:
-        if time.time() > curr_time + 10: #1 minute
+        if time.time() > curr_time + 60: #1 minute
             logging.info(f"Time limit reached")
             file_path = "dump/data.json"
             with open(file_path, 'w') as f:
@@ -56,8 +56,9 @@ def stream_data():
             res = get_data()
             res = format_data(res)
             
-            
+
             producer.send('users_created', json.dumps(res).encode('utf-8'))
+            logging.info("Data streamed to Kafka")
             data.append(res)
         except Exception as e:
             logging.error(f'An error occured: {e}')
@@ -119,7 +120,7 @@ def put_data_in_postgres_database():
     conn, cur = connect_to_postgres()
     for df in data : 
         cur.execute('''
-            INSERT INTO public."users" (id, first_name, last_name, gender, address, post_code, email, username, registered_date, phone, picture)
+            INSERT INTO users (id, first_name, last_name, gender, address, post_code, email, username, registered_date, phone, picture)
             VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
         ''', (df['id'], df['first_name'],
             df['last_name'], df['gender'], df['address'],

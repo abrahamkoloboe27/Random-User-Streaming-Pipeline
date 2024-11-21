@@ -1,6 +1,6 @@
 x-airflow-common: 
   &airflow-common
-  build : ./
+  build : ./airflow
   image: ${AIRFLOW_IMAGE_NAME:-extend_airflow:latest}
   environment : &airflow-common-env
     AIRFLOW__CORE__EXECUTOR : LocalExecutor
@@ -24,15 +24,15 @@ x-airflow-common:
 
 services:
 
-  # pgadmin:
-  #   image: dpage/pgadmin4
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: etl@etl.com
-  #     PGADMIN_DEFAULT_PASSWORD: etl
-  #   ports:
-  #     - "5050:80"
-  #   networks:
-  #     - confluent
+  pgadmin:
+     image: dpage/pgadmin4
+     environment:
+       PGADMIN_DEFAULT_EMAIL: etl@etl.com
+       PGADMIN_DEFAULT_PASSWORD: etl
+     ports:
+       - "5050:80"
+     networks:
+       - confluent
 
   potgres-etl : 
     image : postgres:13
@@ -46,13 +46,13 @@ services:
       retries : 5
       start_period : 10s
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-      - postgres-etl-volume:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      # - postgres-etl-volume:/var/lib/postgresql/data
       
     ports:
       - "5433:5432"
     networks:
-        - confluent
+        - default 
 
   zookeeper:
       image: confluentinc/cp-zookeeper:7.4.0
@@ -71,10 +71,10 @@ services:
       networks:
         - confluent
 
-  broker:
+  broker-etl:
     image: confluentinc/cp-server:7.4.0
-    hostname: broker
-    container_name: broker
+    hostname: broker-etl
+    container_name: broker-etl
     depends_on:
       zookeeper:
         condition: service_healthy
@@ -82,10 +82,10 @@ services:
       - "9092:9092"
       - "9101:9101"
     environment:
-      KAFKA_BROKER_ID: 1
+      KAFKA_broker-etl_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: 'zookeeper:2181'
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://broker-etl:29092,PLAINTEXT_HOST://localhost:9092
       KAFKA_METRIC_REPORTERS: io.confluent.metrics.reporter.ConfluentMetricsReporter
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
@@ -96,7 +96,7 @@ services:
       KAFKA_JMX_PORT: 9101
       KAFKA_JMX_HOSTNAME: localhost
       KAFKA_CONFLUENT_SCHEMA_REGISTRY_URL: http://schema-registry:8081
-      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker:29092
+      CONFLUENT_METRICS_REPORTER_BOOTSTRAP_SERVERS: broker-etl:29092
       CONFLUENT_METRICS_REPORTER_TOPIC_REPLICAS: 1
       CONFLUENT_METRICS_ENABLE: 'false'
       CONFLUENT_SUPPORT_CUSTOMER_ID: 'anonymous'
@@ -113,13 +113,13 @@ services:
     hostname: schema-registry
     container_name: schema-registry
     depends_on:
-      broker:
+      broker-etl:
         condition: service_healthy
     ports:
       - "8081:8081"
     environment:
       SCHEMA_REGISTRY_HOST_NAME: schema-registry
-      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker:29092'
+      SCHEMA_REGISTRY_KAFKASTORE_BOOTSTRAP_SERVERS: 'broker-etl:29092'
       SCHEMA_REGISTRY_LISTENERS: http://0.0.0.0:8081
     networks:
       - confluent
@@ -133,14 +133,14 @@ services:
     hostname: control-center
     container_name: control-center
     depends_on:
-      broker:
+      broker-etl:
         condition: service_healthy
       schema-registry:
         condition: service_healthy
     ports:
       - "9021:9021"
     environment:
-      CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker:29092'
+      CONTROL_CENTER_BOOTSTRAP_SERVERS: 'broker-etl:29092'
       CONTROL_CENTER_SCHEMA_REGISTRY_URL: "http://schema-registry:8081"
       CONTROL_CENTER_REPLICATION_FACTOR: 1
       CONTROL_CENTER_INTERNAL_TOPICS_PARTITIONS: 1
@@ -191,7 +191,7 @@ services:
     << : *airflow-common
     command : webserver
     ports :
-      - "8080:8080"
+      - "28080:8080"
     healthcheck :
       test : ["CMD-SHELL", "[ -f /opt/airflow/airflow-webserver.pid ]"]
       interval : 30s
@@ -213,7 +213,26 @@ services:
     networks:
         - confluent
 
-  
+  spark-master:
+    image: bitnami/spark:latest
+    command: bin/spark-class org.apache.spark.deploy.master.Master
+    ports:
+      - "9090:8080"
+      - "7077:7077"
+    networks:
+      - confluent
+  spark-worker:
+    image: bitnami/spark:latest
+    command: bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
+    depends_on:
+      - spark-master
+    environment:
+      SPARK_MODE: worker
+      SPARK_WORKER_CORES: 2
+      SPARK_WORKER_MEMORY: 1g
+      SPARK_MASTER_URL: spark://spark-master:7077
+    networks:
+      - confluent
 
 networks:
   confluent:
