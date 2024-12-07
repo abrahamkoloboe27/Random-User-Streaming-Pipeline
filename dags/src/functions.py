@@ -13,9 +13,10 @@ def get_data():
     data = response.json()
     
     logging.info(f"Data fetched")
-    return data['results'][0]
+    age = data['results'][0]['dob']['age']
+    return data['results'][0], age
 
-def format_data(res):
+def format_data(res, age):
     data = {}
     location = res['location']
     data['id'] = res["login"]["uuid"][10:]
@@ -31,6 +32,7 @@ def format_data(res):
     data['registered_date'] = res['registered']['date']
     data['phone'] = res['phone']
     data['picture'] = res['picture']['medium']
+    data['age'] = age
     logging.info(f"Data formatted")
     return data
 
@@ -42,19 +44,19 @@ def custom_serializer(obj):
 def stream_data():
 
     data = []
-    producer = KafkaProducer(bootstrap_servers=['broker-etl:29092'], max_block_ms=5000)
+    producer = KafkaProducer(bootstrap_servers=['redpanda:9092'], max_block_ms=5000)
     curr_time = time.time()
 
     while True:
-        if time.time() > curr_time + 60: #1 minute
+        if time.time() > curr_time + 10: #1 minute
             logging.info(f"Time limit reached")
             file_path = "dump/data.json"
             with open(file_path, 'w') as f:
                 json.dump(data, f, ensure_ascii=False, indent=4)
             break
         try:
-            res = get_data()
-            res = format_data(res)
+            res,age = get_data()
+            res = format_data(res,age)
             
 
             producer.send('users_created', json.dumps(res).encode('utf-8'))

@@ -7,3 +7,5 @@ up-remove-orphans:
 build-up: build up
 down: 
 	docker compose down
+down-v: 
+	docker compose down -v
